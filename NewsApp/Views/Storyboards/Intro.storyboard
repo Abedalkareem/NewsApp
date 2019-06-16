@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Coq-eR-8nG">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="Xhe-pO-DQs">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="Coq-eR-8nG" customClass="SplashViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5dC-wi-vTV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFs-gg-esb" customClass="ExpandedView" customModule="NewsApp" customModuleProvider="target">
+                                <rect key="frame" x="147" y="388" width="120" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="7z6-7i-yx9"/>
+                                    <constraint firstAttribute="width" constant="120" id="VaQ-ad-CeJ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITn-1i-3dW" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
+                                <rect key="frame" x="154.5" y="358" width="105" height="180"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74309569600000003" green="0.2857166827" blue="0.36470532420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HFs-gg-esb" firstAttribute="centerY" secondItem="5dC-wi-vTV" secondAttribute="centerY" id="Oaf-Pk-RKe"/>
+                            <constraint firstItem="ITn-1i-3dW" firstAttribute="centerY" secondItem="5dC-wi-vTV" secondAttribute="centerY" id="V3l-fk-x9Q"/>
+                            <constraint firstItem="HFs-gg-esb" firstAttribute="centerX" secondItem="5dC-wi-vTV" secondAttribute="centerX" id="WrN-YL-mhS"/>
+                            <constraint firstItem="ITn-1i-3dW" firstAttribute="centerX" secondItem="5dC-wi-vTV" secondAttribute="centerX" id="aeR-C9-peQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Oqb-mn-TF9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ojb-Bi-05b" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="44"/>
+        </scene>
+        <!--Intro View Controller-->
+        <scene sceneID="HL8-za-p8T">
+            <objects>
+                <viewController storyboardIdentifier="IntroViewController" id="eBX-L1-TDB" customClass="IntroViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dn5-uN-jnW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8AY-Vl-Gkh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.74309569600000003" green="0.2857166827" blue="0.36470532420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view alpha="0.55000001192092896" tag="-1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQI-VQ-gDf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ku-cV-n7x" customClass="AMButton" customModule="NewsApp" customModuleProvider="target">
+                                <rect key="frame" x="50" y="762" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qiC-k3-4S4"/>
+                                </constraints>
+                                <state key="normal" title="intro_lets_go_button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isMainStyle" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="letsGo:" destination="eBX-L1-TDB" eventType="touchUpInside" id="Uq4-l2-ReC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYj-wG-Q8T" customClass="AMButton" customModule="NewsApp" customModuleProvider="target">
+                                <rect key="frame" x="50" y="696" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Qoh-9j-NaZ"/>
+                                </constraints>
+                                <state key="normal" title="intro_register_button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isWhiteStyle" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="register:" destination="eBX-L1-TDB" eventType="touchUpInside" id="6BI-xm-pkd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6W-ld-l7v" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
+                                <rect key="frame" x="40" y="318.5" width="239.5" height="119"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----------------------" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cU-zY-lER" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
+                                <rect key="frame" x="40" y="436" width="334" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isLight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74309569600000003" green="0.2857166827" blue="0.36470532420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6cU-zY-lER" firstAttribute="leading" secondItem="nv9-27-zJI" secondAttribute="leading" constant="40" id="0FW-sG-rea"/>
+                            <constraint firstItem="9ku-cV-n7x" firstAttribute="leading" secondItem="nv9-27-zJI" secondAttribute="leading" constant="50" id="3Sl-lQ-MWy"/>
+                            <constraint firstItem="zQI-VQ-gDf" firstAttribute="trailing" secondItem="Dn5-uN-jnW" secondAttribute="trailing" id="41g-ZD-Rx7"/>
+                            <constraint firstItem="8AY-Vl-Gkh" firstAttribute="bottom" secondItem="Dn5-uN-jnW" secondAttribute="bottom" id="4px-rM-tmq"/>
+                            <constraint firstItem="pYj-wG-Q8T" firstAttribute="centerX" secondItem="Dn5-uN-jnW" secondAttribute="centerX" id="AHK-Qb-6B5"/>
+                            <constraint firstItem="zQI-VQ-gDf" firstAttribute="leading" secondItem="Dn5-uN-jnW" secondAttribute="leading" id="AbA-XN-eQ9"/>
+                            <constraint firstItem="8AY-Vl-Gkh" firstAttribute="trailing" secondItem="Dn5-uN-jnW" secondAttribute="trailing" id="Aqm-MN-eYL"/>
+                            <constraint firstItem="6cU-zY-lER" firstAttribute="centerX" secondItem="Dn5-uN-jnW" secondAttribute="centerX" id="GYk-qC-1hE"/>
+                            <constraint firstItem="pYj-wG-Q8T" firstAttribute="leading" secondItem="nv9-27-zJI" secondAttribute="leading" constant="50" id="Hh8-az-Yxv"/>
+                            <constraint firstItem="8AY-Vl-Gkh" firstAttribute="leading" secondItem="Dn5-uN-jnW" secondAttribute="leading" id="LHQ-rR-fv1"/>
+                            <constraint firstItem="nv9-27-zJI" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G6W-ld-l7v" secondAttribute="trailing" symbolic="YES" id="MzH-Qd-xjP"/>
+                            <constraint firstItem="zQI-VQ-gDf" firstAttribute="top" secondItem="Dn5-uN-jnW" secondAttribute="top" id="QfC-Pc-5bw"/>
+                            <constraint firstItem="9ku-cV-n7x" firstAttribute="centerX" secondItem="Dn5-uN-jnW" secondAttribute="centerX" id="Sex-mC-ffq"/>
+                            <constraint firstItem="8AY-Vl-Gkh" firstAttribute="top" secondItem="Dn5-uN-jnW" secondAttribute="top" id="bc3-VJ-aUt"/>
+                            <constraint firstItem="G6W-ld-l7v" firstAttribute="leading" secondItem="nv9-27-zJI" secondAttribute="leading" constant="40" id="dVq-t1-nR7"/>
+                            <constraint firstItem="zQI-VQ-gDf" firstAttribute="bottom" secondItem="Dn5-uN-jnW" secondAttribute="bottom" id="drT-8g-lIz"/>
+                            <constraint firstItem="G6W-ld-l7v" firstAttribute="centerY" secondItem="Dn5-uN-jnW" secondAttribute="centerY" constant="-70" id="fuX-TG-Yql"/>
+                            <constraint firstItem="9ku-cV-n7x" firstAttribute="top" secondItem="pYj-wG-Q8T" secondAttribute="bottom" constant="16" id="mCJ-cS-y5Y"/>
+                            <constraint firstItem="6cU-zY-lER" firstAttribute="top" secondItem="G6W-ld-l7v" secondAttribute="bottom" constant="-1.5" id="nrA-hK-hfz"/>
+                            <constraint firstItem="nv9-27-zJI" firstAttribute="bottom" secondItem="9ku-cV-n7x" secondAttribute="bottom" constant="50" id="plN-6k-DhK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nv9-27-zJI"/>
+                    </view>
+                    <connections>
+                        <outlet property="aboutLabel" destination="6cU-zY-lER" id="A97-sc-fg5"/>
+                        <outlet property="videoView" destination="8AY-Vl-Gkh" id="cO0-Ju-0eY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rO5-Ew-o0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843.47826086956525" y="43.206521739130437"/>
+        </scene>
+    </scenes>
+</document>

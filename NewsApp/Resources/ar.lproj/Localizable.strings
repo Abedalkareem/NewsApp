@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  NewsApp
+
+  Created by abedalkareem omreyh on 6/16/19.
+  Copyright © 2019 abedalkareem. All rights reserved.
+*/
+
+// MARK: - Errors
+
+"parsing_error" = "خطأ اثناء احضار المعلومات";
+
+// MARK: - Intro
+
+"intro_about_text" = "اكثر موقع اخبار موثوق في العالم";
+"intro_register_button" = "سجل الان";
+"intro_lets_go_button" = "انطلق !";
+
+// MARK: - Main
+
+"main_title_top_headlins" = "ابرز العناوين";
+"main_n_char" = "N";
+"main_english_language" = "EN";
+"main_arabic_language" = "عربي";
+
+// MARK: - News details
+
+"news_details_title" = "التفاصيل";
