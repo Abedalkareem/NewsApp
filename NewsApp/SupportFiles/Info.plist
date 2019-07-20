@@ -22,8 +22,9 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Swiss 721 Black No.2 BT.ttf</string>
-		<string>Swiss 721 Light BT.ttf</string>
+		<string>freshman.ttf</string>
+		<string>robotoMono_bold.ttf</string>
+		<string>robotoMono_regular.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

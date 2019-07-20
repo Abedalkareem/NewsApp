@@ -11,12 +11,12 @@ import Shared
 @IBDesignable
 class AMLabel: UILabel {
   
-  
   // MARK: - Parameters
 
+  @IBInspectable var isOldSchool: Bool = false
   @IBInspectable var isBold: Bool = false
   @IBInspectable var isLight: Bool = false
-  
+
   // MARK: - View lifecycle
   
   override func awakeFromNib() {
@@ -24,15 +24,15 @@ class AMLabel: UILabel {
     
     var fontName = ""
     if isBold {
-      fontName = Constants.fonts.bold
+      fontName = Theme.fonts.bold
+    } else if isOldSchool {
+      fontName = Theme.fonts.oldSchool
     } else {
-      fontName = Constants.fonts.light
+      fontName = Theme.fonts.light
     }
-    
+
     font = UIFont(name: fontName, size: font.pointSize)
-    
+
   }
-  
-  
-  
+
 }

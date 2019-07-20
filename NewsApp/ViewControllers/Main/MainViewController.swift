@@ -26,10 +26,11 @@ class MainViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "main_title_top_headlins".localiz()
-    
-    registerCells()
+    title = "main_title_top_headlins".localize
+
     addChangeLanguageButton()
+
+    registerCells()
     observeForChanges()
   }
 
@@ -58,11 +59,10 @@ class MainViewController: BaseViewController {
   private func registerCells() {
     tableView.register(NewsTableViewCell.self)
   }
-  
+
   override func changeAppLanguage() {
     newsListViewModel?.languageDidChanged()
   }
-  
 }
 
 

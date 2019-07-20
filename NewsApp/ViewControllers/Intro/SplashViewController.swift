@@ -9,20 +9,18 @@
 import UIKit
 
 class SplashViewController: BaseViewController {
-  
-  
+
   // MARK: - Properties
 
   weak var delegate: SplashViewControllerDelegate?
-  
-  
-  // MARK: - ViewController lifecycle
+
+  // MARK: - View Controller lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     nextPage()
-    
+
   }
   
   private func nextPage() {
@@ -30,7 +28,6 @@ class SplashViewController: BaseViewController {
       self.delegate?.nextViewController()
     }
   }
-  
   
 }
 

@@ -9,10 +9,10 @@
 import UIKit
 
 public struct Source: Decodable {
-
+  
   public var id: String?
   public var name: String?
-
+  
   public init() {}
-
+  
 }

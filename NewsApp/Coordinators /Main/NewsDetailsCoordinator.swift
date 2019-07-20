@@ -11,9 +11,8 @@ import Shared
 
 class NewsDetailsCoordinator: Coordinator {
   
-  
   // MARK: - Properties
-
+  
   var presenter: UINavigationController?
   lazy var newsDetailsViewController: NewsDetailsViewController = {
     let newsDetailsViewController = StoryboardUtil.viewController(NewsDetailsViewController.self, storyboard: .main)
@@ -24,7 +23,7 @@ class NewsDetailsCoordinator: Coordinator {
   var newsListViewModel: NewsListViewModel?
   
   // MARK: - init
-
+  
   init(presenter: UINavigationController, newsListViewModel: NewsListViewModel) {
     self.presenter = presenter
     self.newsListViewModel = newsListViewModel

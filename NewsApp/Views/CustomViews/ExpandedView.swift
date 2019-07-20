@@ -41,7 +41,7 @@ class ExpandedView: UIView {
   }
   
   override func draw(_ rect: CGRect) {
-    shapeLayer.fillColor = Constants.colors.dark.cgColor
+    shapeLayer.fillColor = UIColor.white.cgColor
     
     shapeLayer.path = smallBezierPath.cgPath
     

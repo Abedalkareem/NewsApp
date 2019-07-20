@@ -9,7 +9,7 @@
 import UIKit
 
 public struct News: Decodable {
-
+  
   public var title: String?
   public var description: String?
   public var url: String?
@@ -18,7 +18,7 @@ public struct News: Decodable {
   public var content: String?
   public var author: String?
   public var source: Source?
-
+  
   public init() {}
-
+  
 }

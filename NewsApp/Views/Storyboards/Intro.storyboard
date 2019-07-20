@@ -32,11 +32,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isOldSchool" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.74309569600000003" green="0.2857166827" blue="0.36470532420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1529411765" green="0.1529411765" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HFs-gg-esb" firstAttribute="centerY" secondItem="5dC-wi-vTV" secondAttribute="centerY" id="Oaf-Pk-RKe"/>
                             <constraint firstItem="ITn-1i-3dW" firstAttribute="centerY" secondItem="5dC-wi-vTV" secondAttribute="centerY" id="V3l-fk-x9Q"/>
@@ -58,52 +58,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8AY-Vl-Gkh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="XDO-vc-7jm">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" red="0.74309569600000003" green="0.2857166827" blue="0.36470532420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view alpha="0.55000001192092896" tag="-1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQI-VQ-gDf">
+                            </imageView>
+                            <view alpha="0.59999999999999998" tag="-1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQI-VQ-gDf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.1529411765" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ku-cV-n7x" customClass="AMButton" customModule="NewsApp" customModuleProvider="target">
                                 <rect key="frame" x="50" y="762" width="314" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="qiC-k3-4S4"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="intro_lets_go_button"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isMainStyle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isMainStyle" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isWhiteStyle" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="letsGo:" destination="eBX-L1-TDB" eventType="touchUpInside" id="Uq4-l2-ReC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYj-wG-Q8T" customClass="AMButton" customModule="NewsApp" customModuleProvider="target">
-                                <rect key="frame" x="50" y="696" width="314" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Qoh-9j-NaZ"/>
-                                </constraints>
-                                <state key="normal" title="intro_register_button"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isWhiteStyle" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="register:" destination="eBX-L1-TDB" eventType="touchUpInside" id="6BI-xm-pkd"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6W-ld-l7v" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
-                                <rect key="frame" x="40" y="318.5" width="239.5" height="119"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="G6W-ld-l7v" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
+                                <rect key="frame" x="111.5" y="330.5" width="191.5" height="95.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isOldSchool" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----------------------" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cU-zY-lER" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
-                                <rect key="frame" x="40" y="436" width="334" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----------------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cU-zY-lER" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
+                                <rect key="frame" x="111.5" y="424.5" width="191.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -111,39 +99,38 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.74309569600000003" green="0.2857166827" blue="0.36470532420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1529411765" green="0.1529411765" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6cU-zY-lER" firstAttribute="leading" secondItem="nv9-27-zJI" secondAttribute="leading" constant="40" id="0FW-sG-rea"/>
                             <constraint firstItem="9ku-cV-n7x" firstAttribute="leading" secondItem="nv9-27-zJI" secondAttribute="leading" constant="50" id="3Sl-lQ-MWy"/>
                             <constraint firstItem="zQI-VQ-gDf" firstAttribute="trailing" secondItem="Dn5-uN-jnW" secondAttribute="trailing" id="41g-ZD-Rx7"/>
-                            <constraint firstItem="8AY-Vl-Gkh" firstAttribute="bottom" secondItem="Dn5-uN-jnW" secondAttribute="bottom" id="4px-rM-tmq"/>
-                            <constraint firstItem="pYj-wG-Q8T" firstAttribute="centerX" secondItem="Dn5-uN-jnW" secondAttribute="centerX" id="AHK-Qb-6B5"/>
                             <constraint firstItem="zQI-VQ-gDf" firstAttribute="leading" secondItem="Dn5-uN-jnW" secondAttribute="leading" id="AbA-XN-eQ9"/>
-                            <constraint firstItem="8AY-Vl-Gkh" firstAttribute="trailing" secondItem="Dn5-uN-jnW" secondAttribute="trailing" id="Aqm-MN-eYL"/>
+                            <constraint firstItem="XDO-vc-7jm" firstAttribute="leading" secondItem="nv9-27-zJI" secondAttribute="leading" id="Eiv-lW-Hpj"/>
+                            <constraint firstAttribute="bottom" secondItem="XDO-vc-7jm" secondAttribute="bottom" id="GFf-Et-sq7"/>
                             <constraint firstItem="6cU-zY-lER" firstAttribute="centerX" secondItem="Dn5-uN-jnW" secondAttribute="centerX" id="GYk-qC-1hE"/>
-                            <constraint firstItem="pYj-wG-Q8T" firstAttribute="leading" secondItem="nv9-27-zJI" secondAttribute="leading" constant="50" id="Hh8-az-Yxv"/>
-                            <constraint firstItem="8AY-Vl-Gkh" firstAttribute="leading" secondItem="Dn5-uN-jnW" secondAttribute="leading" id="LHQ-rR-fv1"/>
+                            <constraint firstItem="XDO-vc-7jm" firstAttribute="top" secondItem="Dn5-uN-jnW" secondAttribute="top" id="K6M-Sb-Xnd"/>
                             <constraint firstItem="nv9-27-zJI" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G6W-ld-l7v" secondAttribute="trailing" symbolic="YES" id="MzH-Qd-xjP"/>
                             <constraint firstItem="zQI-VQ-gDf" firstAttribute="top" secondItem="Dn5-uN-jnW" secondAttribute="top" id="QfC-Pc-5bw"/>
                             <constraint firstItem="9ku-cV-n7x" firstAttribute="centerX" secondItem="Dn5-uN-jnW" secondAttribute="centerX" id="Sex-mC-ffq"/>
-                            <constraint firstItem="8AY-Vl-Gkh" firstAttribute="top" secondItem="Dn5-uN-jnW" secondAttribute="top" id="bc3-VJ-aUt"/>
-                            <constraint firstItem="G6W-ld-l7v" firstAttribute="leading" secondItem="nv9-27-zJI" secondAttribute="leading" constant="40" id="dVq-t1-nR7"/>
+                            <constraint firstItem="6cU-zY-lER" firstAttribute="width" secondItem="G6W-ld-l7v" secondAttribute="width" id="bNs-yK-V8s"/>
                             <constraint firstItem="zQI-VQ-gDf" firstAttribute="bottom" secondItem="Dn5-uN-jnW" secondAttribute="bottom" id="drT-8g-lIz"/>
                             <constraint firstItem="G6W-ld-l7v" firstAttribute="centerY" secondItem="Dn5-uN-jnW" secondAttribute="centerY" constant="-70" id="fuX-TG-Yql"/>
-                            <constraint firstItem="9ku-cV-n7x" firstAttribute="top" secondItem="pYj-wG-Q8T" secondAttribute="bottom" constant="16" id="mCJ-cS-y5Y"/>
+                            <constraint firstItem="G6W-ld-l7v" firstAttribute="centerX" secondItem="Dn5-uN-jnW" secondAttribute="centerX" id="kpS-1g-Gzb"/>
                             <constraint firstItem="6cU-zY-lER" firstAttribute="top" secondItem="G6W-ld-l7v" secondAttribute="bottom" constant="-1.5" id="nrA-hK-hfz"/>
+                            <constraint firstItem="XDO-vc-7jm" firstAttribute="trailing" secondItem="nv9-27-zJI" secondAttribute="trailing" id="oJ0-tw-Yfa"/>
                             <constraint firstItem="nv9-27-zJI" firstAttribute="bottom" secondItem="9ku-cV-n7x" secondAttribute="bottom" constant="50" id="plN-6k-DhK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nv9-27-zJI"/>
                     </view>
                     <connections>
                         <outlet property="aboutLabel" destination="6cU-zY-lER" id="A97-sc-fg5"/>
-                        <outlet property="videoView" destination="8AY-Vl-Gkh" id="cO0-Ju-0eY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rO5-Ew-o0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="843.47826086956525" y="43.206521739130437"/>
+            <point key="canvasLocation" x="843.47826086956525" y="42.857142857142854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background2" width="720" height="1280"/>
+    </resources>
 </document>

@@ -8,22 +8,26 @@
 
 import UIKit
 
-class NewsServices {
-
-  private static var dataManger: DataManager = { DataManager(networking: HttpClient()) }()
-
-  class func getTopHeadlines(complition: @escaping ([NewsViewModel]?, Error?) -> Void) {
-
-    dataManger.fetch(endpoint: .topHeadlines) { (error, topHeadlines: TopHeadlines?) in
+public class NewsServices {
+  
+  private let dataManager: DataManager
+  
+  public init(dataManager: DataManager) {
+    self.dataManager = dataManager
+  }
+  
+  public func getTopHeadlines(complition: @escaping ([NewsViewModel]?, Error?) -> Void) {
+    
+    dataManager.fetch(endpoint: .topHeadlines) { (error, topHeadlines: TopHeadlines?) in
       guard error == nil else {
         complition(nil, error)
         return
       }
       complition(topHeadlines?.articles?.map(NewsViewModel.init), nil)
     }
-
+    
   }
-
+  
 }
 
 fileprivate struct TopHeadlines: Decodable {

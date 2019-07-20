@@ -8,7 +8,6 @@
 
 import UIKit
 import Shared
-import LanguageManager_iOS
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,21 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    
-    let window = UIWindow(frame: UIScreen.main.bounds)
-    self.window = window
-    
-    appCoordinator = AppCoordinator(window: window)
-    appCoordinator?.start()
-    
-    
+
+    LocalizationHelper.defaultLanguage = .en
+
     Utilities.setAppStyle()
-    
-    LanguageManager.shared.defaultLanguage = .en
 
     LoadingHelper.setup()
-    
+
+    startRootViewController()
+
     return true
+  }
+
+  private func startRootViewController() {
+    let window = UIWindow(frame: UIScreen.main.bounds)
+    self.window = window
+    appCoordinator = AppCoordinator(window: window)
+    appCoordinator?.start()
   }
   
   func applicationWillResignActive(_ application: UIApplication) { }

@@ -13,7 +13,7 @@ class IntroCoordinator: Coordinator {
   // MARK: - Properties
 
   var presenter: UIViewController?
-  lazy var introViewController: IntroViewController = {
+  lazy var introViewController: IntroViewController? = {
     return StoryboardUtil.viewController(IntroViewController.self, storyboard: .intro)
   }()
   
@@ -26,7 +26,7 @@ class IntroCoordinator: Coordinator {
   // MARK: - Coordinator
   
   override func start() {
-    guard let presenter = presenter else {
+    guard let presenter = presenter, let introViewController = introViewController else {
       return
     }
     introViewController.modalTransitionStyle = .crossDissolve
@@ -35,27 +35,19 @@ class IntroCoordinator: Coordinator {
   }
   
   override func finish() {
-    
+    introViewController = nil
   }
   
 }
 
 extension IntroCoordinator: IntroViewControllerDelegate {
-  func nextViewController(destination: Destination) {
-    if destination == .main {
-      let mainCoordinator = MainCoordinator(presenter: introViewController)
-      addChild(mainCoordinator)
-      mainCoordinator.start()
-    } else {
-      // TODO: Handle the regstration flow
+  func nextViewController() {
+    guard let introViewController = introViewController else {
+      return
     }
-    
+    let mainCoordinator = MainCoordinator(presenter: introViewController)
+    addChild(mainCoordinator)
+    mainCoordinator.start()
   }
 }
-
-enum Destination {
-  case main
-  case register
-}
-
 

@@ -13,7 +13,7 @@ import Shared
 class MainCoordinator: Coordinator {
   
   // MARK: - Properties
-
+  
   var presenter: UIViewController?
   lazy var mainViewController: MainViewController = {
     let mainViewController = StoryboardUtil.viewController(MainViewController.self, storyboard: .main)
@@ -26,13 +26,14 @@ class MainCoordinator: Coordinator {
   }()
   
   lazy var newsListViewModel: NewsListViewModel = {
-    let newsListViewModel = NewsListViewModel()
+    let newsServices = NewsServices(dataManager: DataManager(networking: HttpClient()))
+    let newsListViewModel = NewsListViewModel(newsServices: newsServices)
     newsListViewModel.coordinatorDelegate = self
     return newsListViewModel
   }()
   
   // MARK: - init
-
+  
   init(presenter: UIViewController) {
     self.presenter = presenter
   }

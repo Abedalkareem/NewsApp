@@ -10,67 +10,42 @@ import UIKit
 import AVKit
 
 class IntroViewController: BaseViewController {
-  
 
   // MARK: - IBOutlets
 
-  @IBOutlet weak var videoView: UIView!
   @IBOutlet weak var aboutLabel: AMLabel!
 
   // MARK: - Properties
 
-  private var player: AVPlayer!
   weak var delegate: IntroViewControllerDelegate?
-  
-  // MARK: - ViewController lifecycle
+
+  // MARK: Private properties
+  private var player: AVPlayer!
+
+  // MARK: - View Controller lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    addBackgroundVideo()
-    hideAllViews()
+    view.hideAllViews()
     
-    aboutLabel.setTextWithTypeAnimation(typedText: "intro_about_text".localiz(), characterDelay:  10)
+    aboutLabel.setTextWithTypeAnimation(typedText: "intro_about_text".localize, characterDelay:  10)
     
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    showAllViews()
+    view.showAllViews()
   }
-  
-  private func addBackgroundVideo() {
-    let videoURL = Bundle.main.url(forResource: "intro_video", withExtension: "mp4")
-    let playerItem = AVPlayerItem(url: videoURL!)
-    NotificationCenter.default.addObserver(self, selector: #selector(didFinishPlaying(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
-    player = AVPlayer(playerItem: playerItem)
-    let playerLayer = AVPlayerLayer(player: player)
-    playerLayer.frame = view.frame
-    playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-    videoView.layer.addSublayer(playerLayer)
-    
-    player.play()
-  }
-  
-  @objc private func didFinishPlaying(notification: Notification) {
-    player.seek(to: CMTime.zero)
-    player.play()
-  }
-  
-  // MARK: - Properties
-  
-  
+
+  // MARK: - IBActions
+
   @IBAction func letsGo(_ sender: Any) {
-    delegate?.nextViewController(destination: .main)
-  }
-  
-  @IBAction func register(_ sender: Any) {
-    delegate?.nextViewController(destination: .register)
+    delegate?.nextViewController()
   }
   
 }
 
-
 protocol IntroViewControllerDelegate: AnyObject {
-  func nextViewController(destination: Destination)
+  func nextViewController()
 }

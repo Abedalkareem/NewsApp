@@ -28,7 +28,7 @@ class NewsDetailsViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "news_details_title".localiz()
+    title = "news_details_title".localize
     
     addAppLogo()
     addBackButton()
@@ -46,10 +46,14 @@ class NewsDetailsViewController: BaseViewController {
     } else {
       newsImageView.image = #imageLiteral(resourceName: "placeholder")
     }
+    
     titleLabel.text = news.title
     dateLabel.text = news.publishedAt
+
     descriptionLabel.text = news.description
+
     authorLabel.text = news.author != nil ? news.author : news.sourceName
+    authorLabel.textColor = Theme.colors.red
   }
   
 }

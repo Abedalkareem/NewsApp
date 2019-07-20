@@ -17,17 +17,24 @@ class NewsTableViewCell: UITableViewCell {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var dateLabel: UILabel!
   @IBOutlet weak var authorLabel: UILabel!
-  
+  @IBOutlet weak var containerView: UIView!
+
   
   // MARK: - View lifecycle
 
   override func awakeFromNib() {
     super.awakeFromNib()
-    
+
+    containerView.backgroundColor = Theme.colors.mainLight
+  }
+
+  override func layoutSubviews() {
+    super.layoutSubviews()
+
+    containerView.roundedCorner(radius: 10)
   }
   
-  
-  // MARK: - Setup the cell
+  // MARK: - Setups
   
   func setupCellWith(news: NewsViewModel?) {
     guard let news = news else {
@@ -41,6 +48,7 @@ class NewsTableViewCell: UITableViewCell {
     titleLabel.text = news.title
     dateLabel.text = news.publishedAt
     authorLabel.text = news.author != nil ? news.author : news.sourceName
+    authorLabel.textColor = Theme.colors.red
   }
   
 }

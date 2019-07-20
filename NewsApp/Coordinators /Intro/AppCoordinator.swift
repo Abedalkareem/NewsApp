@@ -14,7 +14,7 @@ class AppCoordinator: Coordinator {
 
   let window: UIWindow?
   
-  lazy var rootViewController: SplashViewController = {
+  lazy var rootViewController: SplashViewController? = {
     return StoryboardUtil.viewController(SplashViewController.self, storyboard: .intro)
   }()
   
@@ -30,18 +30,24 @@ class AppCoordinator: Coordinator {
     guard let window = window else {
       return
     }
-    rootViewController.delegate = self
+    rootViewController?.delegate = self
     window.rootViewController = rootViewController
     window.makeKeyAndVisible()
   }
-  
-  
+
+  override func finish() {
+    rootViewController = nil
+  }
 }
 
 extension AppCoordinator: SplashViewControllerDelegate {
   func nextViewController() {
+    guard let rootViewController = rootViewController else {
+      return
+    }
     let introCoordinator = IntroCoordinator(presenter: rootViewController)
     addChild(introCoordinator)
     introCoordinator.start()
+    finish()
   }
 }

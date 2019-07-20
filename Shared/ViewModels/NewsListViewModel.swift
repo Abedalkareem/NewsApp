@@ -17,9 +17,11 @@ public class NewsListViewModel {
   public var selectedNews: NewsViewModel!
   public weak var coordinatorDelegate: NewsViewModelDelegate?
 
+  private var newsServices: NewsServices
 
-  public init(news: [NewsViewModel] = []) {
-    self.news = Observable(news)
+  public init(newsServices: NewsServices) {
+    self.newsServices = newsServices
+    self.news = Observable()
     self.error = Observable()
   }
 
@@ -27,7 +29,7 @@ public class NewsListViewModel {
   
   public func getTopHeadlines(complition: (() -> Void)? = nil) {
 
-    NewsServices.getTopHeadlines { (news, error) in
+    newsServices.getTopHeadlines { (news, error) in
       guard error == nil else {
         self.error?.value = error
         return
@@ -58,8 +60,6 @@ public class NewsListViewModel {
   }
 
 }
-
-
 
 public protocol NewsViewModelDelegate: AnyObject {
   func openNews()
