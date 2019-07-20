@@ -1,13 +1,6 @@
 <p align="center">
 <img src="https://raw.githubusercontent.com/Abedalkareem/NewsApp/master/logo.png">  </center>
 </p>
-<br>
-
-<br>
-
-
-<b>ScreenShots</b>
-
 <table>
   <tbody>
     <tr>
