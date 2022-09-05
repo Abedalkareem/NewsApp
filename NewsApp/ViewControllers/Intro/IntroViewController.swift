@@ -19,9 +19,6 @@ class IntroViewController: BaseViewController {
 
   weak var delegate: IntroViewControllerDelegate?
 
-  // MARK: Private properties
-  private var player: AVPlayer!
-
   // MARK: - View Controller lifecycle
 
   override func viewDidLoad() {
@@ -45,6 +42,8 @@ class IntroViewController: BaseViewController {
   }
 
 }
+
+// MARK: - IntroViewControllerDelegate
 
 protocol IntroViewControllerDelegate: AnyObject {
   func nextViewController()

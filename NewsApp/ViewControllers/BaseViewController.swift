@@ -16,10 +16,23 @@ class BaseViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    setup()
+  }
+
+  // MARK: - Private method
+
+  private func setup() {
     view.backgroundColor = Theme.Colors.main
   }
 
-  /// Use it to add the App logo at the top right of the app
+  @objc
+  private func pop() {
+    navigationController?.popViewController(animated: true)
+  }
+
+  // MARK: - Public method
+
+  /// Adds the App logo at the top right of the navigation bar.
   func addAppLogo() {
     let logo = UIBarButtonItem(title: "main_n_char".localize, style: .plain, target: nil, action: nil)
     logo.setTitleTextAttributes([
@@ -28,25 +41,21 @@ class BaseViewController: UIViewController {
     navigationItem.rightBarButtonItem = logo
   }
 
-  /// Use it to add the back button to the navigation bar
+  /// Adds the back button to the navigation bar.
   func addBackButton() {
     let image = Utilities.isRightToLeft ? #imageLiteral(resourceName: "back_ar") : #imageLiteral(resourceName: "back")
     let backButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(pop))
     navigationItem.leftBarButtonItem = backButton
   }
 
+  /// Adds the change language button at the top right of the navigation bar.
   func addChangeLanguageButton() {
     let languageButton = UIBarButtonItem(image: #imageLiteral(resourceName: "world"), style: .plain, target: self, action: #selector(changeAppLanguage))
     navigationItem.rightBarButtonItem = languageButton
   }
 
-  /// Override it to handle the change button action
+  /// Override it to handle the change language action button.
   @objc
   func changeAppLanguage() { }
-
-  @objc
-  private func pop() {
-    navigationController?.popViewController(animated: true)
-  }
 
 }

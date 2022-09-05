@@ -20,7 +20,6 @@ class SplashViewController: BaseViewController {
     super.viewDidLoad()
 
     nextPage()
-
   }
 
   private func nextPage() {
@@ -30,6 +29,8 @@ class SplashViewController: BaseViewController {
   }
 
 }
+
+// MARK: - SplashViewControllerDelegate
 
 protocol SplashViewControllerDelegate: AnyObject {
   func nextViewController()

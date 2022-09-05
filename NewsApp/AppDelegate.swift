@@ -18,18 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-    LocalizationHelper.defaultLanguage = .en
-
-    Utilities.setAppStyle()
-
-    LoadingHelper.setup()
-
-    startRootViewController()
+    setup()
+    start()
 
     return true
   }
 
-  private func startRootViewController() {
+  private func setup() {
+    LocalizationHelper.defaultLanguage = .en
+
+    Theme.setAppStyle()
+
+    LoadingHelper.setup()
+  }
+
+  private func start() {
     let window = UIWindow(frame: UIScreen.main.bounds)
     self.window = window
     appCoordinator = AppCoordinator(window: window)

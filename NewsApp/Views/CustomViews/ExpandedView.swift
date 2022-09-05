@@ -11,26 +11,20 @@ import UIKit
 
 class ExpandedView: UIView {
 
-  // MARK: - Parameters
+  // MARK: - Private Properties
 
   private var shapeLayer = CAShapeLayer()
 
   private var smallBezierPath: UIBezierPath {
-    var viewFrame = frame
-    viewFrame.origin.x = 0
-    viewFrame.origin.y = 0
-    return UIBezierPath(roundedRect: viewFrame,
+    return UIBezierPath(roundedRect: bounds,
                         byRoundingCorners: .allCorners,
-                        cornerRadii: CGSize(width: viewFrame.width, height: viewFrame.height))
+                        cornerRadii: CGSize(width: bounds.width, height: bounds.height))
   }
 
   private var bigBezierPath: UIBezierPath {
-    var viewFrame = frame
-    let width = (superview?.frame.width ?? viewFrame.width) - 20
-    viewFrame.origin.x = -(width / 2) + viewFrame.width / 2
-    viewFrame.origin.y = -(width / 2) + viewFrame.width / 2
-    viewFrame.size.width = width
-    viewFrame.size.height = width
+    var viewFrame = bounds.applying(.init(scaleX: 2, y: 2))
+    viewFrame.origin.x = -(bounds.width / 2)
+    viewFrame.origin.y = -(bounds.width / 2)
     return UIBezierPath(roundedRect: viewFrame,
                         byRoundingCorners: .allCorners,
                         cornerRadii: CGSize(width: viewFrame.width, height: viewFrame.height))
@@ -55,22 +49,18 @@ class ExpandedView: UIView {
   // MARK: - Animation
 
   private func expandAnimation() {
-    CATransaction.begin()
-    let animation = CABasicAnimation(keyPath: "path")
+    let animation = CABasicAnimation(keyPath: #keyPath(CAShapeLayer.path))
     animation.duration = 1.5
     animation.repeatCount = Float.infinity
     animation.toValue = bigBezierPath.cgPath
     animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
     animation.fillMode = .both
     animation.isRemovedOnCompletion = false
-
     shapeLayer.add(animation, forKey: nil)
-    CATransaction.commit()
   }
 
   private func animateAlpha() {
-    CATransaction.begin()
-    let animation = CABasicAnimation(keyPath: "opacity")
+    let animation = CABasicAnimation(keyPath: #keyPath(CAShapeLayer.opacity))
     animation.duration = 1.5
     animation.repeatCount = Float.infinity
     animation.fromValue = 0.6
@@ -80,7 +70,6 @@ class ExpandedView: UIView {
     animation.isRemovedOnCompletion = false
 
     shapeLayer.add(animation, forKey: nil)
-    CATransaction.commit()
   }
 
 }
