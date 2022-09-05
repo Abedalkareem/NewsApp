@@ -41,7 +41,11 @@ enum LocalizationHelper {
                           viewController: UIViewController? = nil,
                           animation: ((UIView) -> Void)? = nil) {
     let language: Languages = id == 0 ? .en : .ar
-    LanguageManager.shared.setLanguage(language: language, rootViewController: viewController, animation: animation)
+    LanguageManager.shared.setLanguage(language: language,
+                                       viewControllerFactory: { _ in
+      return viewController ?? UIViewController()
+    },
+                                       animation: animation)
   }
   
 }

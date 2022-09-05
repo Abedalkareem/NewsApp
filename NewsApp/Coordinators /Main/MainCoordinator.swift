@@ -67,9 +67,14 @@ extension MainCoordinator: NewsViewModelDelegate {
     
     rootViewController = UINavigationController(rootViewController: mainViewController)
     
-    LanguageManager.shared.setLanguage(language: Utilities.isRightToLeft ? .en : .ar ,rootViewController: rootViewController, animation: { view in
-      view.frame = CGRect(x: 0, y: -view.frame.height, width: view.frame.width, height: view.frame.height)
-    })
+    let language: Languages = Utilities.isRightToLeft ? .en : .ar
+    LanguageManager.shared.setLanguage(language: language,
+                                       viewControllerFactory: { [weak self] _ in
+      return self?.rootViewController ?? UIViewController()
+    },
+                                       animation: { view in
+                                         view.frame = CGRect(x: 0, y: -view.frame.height, width: view.frame.width, height: view.frame.height)
+                                       })
     
   }
 }

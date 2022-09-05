@@ -1,11 +1,11 @@
 PODS:
   - AMProgressHUD (1.0.0)
-  - LanguageManager-iOS (1.1.4)
-  - Nimble (8.0.2)
-  - Quick (2.1.0)
-  - SDWebImage (5.0.6):
-    - SDWebImage/Core (= 5.0.6)
-  - SDWebImage/Core (5.0.6)
+  - LanguageManager-iOS (1.2.5)
+  - Nimble (10.0.0)
+  - Quick (5.0.1)
+  - SDWebImage (5.13.2):
+    - SDWebImage/Core (= 5.13.2)
+  - SDWebImage/Core (5.13.2)
 
 DEPENDENCIES:
   - AMProgressHUD
@@ -15,7 +15,7 @@ DEPENDENCIES:
   - SDWebImage
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AMProgressHUD
     - LanguageManager-iOS
     - Nimble
@@ -24,11 +24,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AMProgressHUD: 579420e7e702e38675a066654c5ca77a54ca6e46
-  LanguageManager-iOS: d443d95070471c050cad4e2877cbf22a39ea4991
-  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
-  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
-  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
+  LanguageManager-iOS: 049345fe4d1c5fbe22af93d438540917f4936359
+  Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
+  Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
+  SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
 
-PODFILE CHECKSUM: 6e7f33213543212d9c0de7abac06480f4b95bd61
+PODFILE CHECKSUM: 79d8f97d3defdfe96905ecbd9666dc0478f801e0
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.11.2
