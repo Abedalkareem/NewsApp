@@ -9,23 +9,23 @@
 import UIKit
 
 class AppCoordinator: Coordinator {
-  
+
   // MARK: - Properties
 
   let window: UIWindow?
-  
+
   lazy var rootViewController: SplashViewController? = {
     return StoryboardUtil.viewController(SplashViewController.self, storyboard: .intro)
   }()
-  
+
   // MARK: - init
 
   init(window: UIWindow) {
     self.window = window
   }
-  
+
   // MARK: - Coordinator
-  
+
   override func start() {
     guard let window = window else {
       return

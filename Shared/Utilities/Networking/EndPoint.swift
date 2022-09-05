@@ -25,33 +25,33 @@ extension EndPoint {
     case .sources:
       url += "sources"
     }
-    
+
     if httpMethod == .get {
       url = "\(url)?\(queryParameters)"
     }
-    
+
     return url
   }
-  
+
   var parameters: [String: Any] {
-    var params = ["apiKey": Obfuscator.deObfuscate("dJHKGHas34#$DFSAdas", Constants.keys.apiKey)]
+    var params = ["apiKey": Obfuscator.deObfuscate("dJHKGHas34#$DFSAdas", Constants.Keys.apiKey)]
     switch self {
     case .topHeadlines:
       params["country"] = Utilities.isRightToLeft ? "ae" : "us"
     case .everything, .sources:
       break
     }
-    
+
     return params
   }
-  
+
   var httpMethod: HttpMethod {
     switch self {
     case .topHeadlines, .everything, .sources:
       return .get
     }
   }
-  
+
   var queryParameters: String {
     return parameters.map { "\($0.key)=\($0.value)" }.joined(separator: "&")
   }

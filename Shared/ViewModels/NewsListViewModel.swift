@@ -26,7 +26,7 @@ public class NewsListViewModel {
   }
 
   // MARK: - Public methods
-  
+
   public func getTopHeadlines(complition: (() -> Void)? = nil) {
 
     newsServices.getTopHeadlines { (news, error) in

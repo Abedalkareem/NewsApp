@@ -15,20 +15,20 @@ class SplashViewController: BaseViewController {
   weak var delegate: SplashViewControllerDelegate?
 
   // MARK: - View Controller lifecycle
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     nextPage()
 
   }
-  
+
   private func nextPage() {
     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
       self.delegate?.nextViewController()
     }
   }
-  
+
 }
 
 protocol SplashViewControllerDelegate: AnyObject {

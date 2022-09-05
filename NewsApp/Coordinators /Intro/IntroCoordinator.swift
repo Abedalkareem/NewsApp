@@ -9,22 +9,22 @@
 import UIKit
 
 class IntroCoordinator: Coordinator {
-  
+
   // MARK: - Properties
 
   var presenter: UIViewController?
   lazy var introViewController: IntroViewController? = {
     return StoryboardUtil.viewController(IntroViewController.self, storyboard: .intro)
   }()
-  
+
   // MARK: - init
 
   init(presenter: UIViewController) {
     self.presenter = presenter
   }
-  
+
   // MARK: - Coordinator
-  
+
   override func start() {
     guard let presenter = presenter, let introViewController = introViewController else {
       return
@@ -33,11 +33,11 @@ class IntroCoordinator: Coordinator {
     introViewController.delegate = self
     presenter.present(introViewController, animated: true, completion: nil)
   }
-  
+
   override func finish() {
     introViewController = nil
   }
-  
+
 }
 
 extension IntroCoordinator: IntroViewControllerDelegate {
@@ -50,4 +50,3 @@ extension IntroCoordinator: IntroViewControllerDelegate {
     mainCoordinator.start()
   }
 }
-

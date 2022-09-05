@@ -14,6 +14,7 @@ target 'NewsApp' do
   # Pods for NewsApp
   pod 'SDWebImage'
   pod 'AMProgressHUD'
+  pod 'SwiftLint'
 
   target 'NewsAppTests' do
     inherit! :search_paths

@@ -6,8 +6,8 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import SDWebImage
+import UIKit
 
 extension UIImageView {
 

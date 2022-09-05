@@ -16,7 +16,7 @@ public class DataManager: Fetcher {
     self.networking = networking
   }
 
-  public func fetch<T>(endpoint: EndPoint, completion: @escaping (Error?, T?) -> Void) where T : Decodable {
+  public func fetch<T>(endpoint: EndPoint, completion: @escaping (Error?, T?) -> Void) where T: Decodable {
     networking.request(endpoint: endpoint, completion: { (error, data) in
       guard error == nil else {
         completion(error, nil)
@@ -33,7 +33,7 @@ public class DataManager: Fetcher {
     })
   }
 
-  public func fetch<T>(endpoint: EndPoint, completion: @escaping (Error?, [T]?) -> Void) where T : Decodable {
+  public func fetch<T>(endpoint: EndPoint, completion: @escaping (Error?, [T]?) -> Void) where T: Decodable {
     networking.request(endpoint: endpoint, completion: { (error, data) in
       guard error == nil else {
         completion(error, nil)
@@ -52,4 +52,3 @@ public class DataManager: Fetcher {
   }
 
 }
-

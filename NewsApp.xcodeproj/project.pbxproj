@@ -603,6 +603,7 @@
 			buildConfigurationList = C6497E7E22B67520000D4F48 /* Build configuration list for PBXNativeTarget "NewsApp" */;
 			buildPhases = (
 				701D11D6384C902858C1F33A /* [CP] Check Pods Manifest.lock */,
+				C6A03B4228C588140086A319 /* Swiftlint */,
 				C6497E5D22B6751E000D4F48 /* Sources */,
 				C6497E5E22B6751E000D4F48 /* Frameworks */,
 				C6497E5F22B6751E000D4F48 /* Resources */,
@@ -852,6 +853,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewsAppTests/Pods-NewsAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C6A03B4228C588140086A319 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		CFB6C5F41A88AF7340F25232 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

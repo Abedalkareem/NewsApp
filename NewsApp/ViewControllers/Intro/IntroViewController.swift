@@ -6,14 +6,14 @@
 //  Copyright © 2018 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import AVKit
+import UIKit
 
 class IntroViewController: BaseViewController {
 
   // MARK: - IBOutlets
 
-  @IBOutlet weak var aboutLabel: AMLabel!
+  @IBOutlet private weak var aboutLabel: AMLabel!
 
   // MARK: - Properties
 
@@ -26,13 +26,13 @@ class IntroViewController: BaseViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     view.hideAllViews()
-    
-    aboutLabel.setTextWithTypeAnimation(typedText: "intro_about_text".localize, characterDelay:  10)
-    
+
+    aboutLabel.setTextWithTypeAnimation(typedText: "intro_about_text".localize, characterDelay: 10)
+
   }
-  
+
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     view.showAllViews()
@@ -43,7 +43,7 @@ class IntroViewController: BaseViewController {
   @IBAction func letsGo(_ sender: Any) {
     delegate?.nextViewController()
   }
-  
+
 }
 
 protocol IntroViewControllerDelegate: AnyObject {

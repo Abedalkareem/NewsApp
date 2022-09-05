@@ -6,26 +6,25 @@
 //  Copyright © 2018 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import Shared
+import UIKit
 
 class NewsTableViewCell: UITableViewCell {
-  
+
   // MARK: - IBOutlets
 
-  @IBOutlet weak var newImageView: UIImageView!
-  @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var dateLabel: UILabel!
-  @IBOutlet weak var authorLabel: UILabel!
-  @IBOutlet weak var containerView: UIView!
+  @IBOutlet private weak var newImageView: UIImageView!
+  @IBOutlet private weak var titleLabel: UILabel!
+  @IBOutlet private weak var dateLabel: UILabel!
+  @IBOutlet private weak var authorLabel: UILabel!
+  @IBOutlet private weak var containerView: UIView!
 
-  
   // MARK: - View lifecycle
 
   override func awakeFromNib() {
     super.awakeFromNib()
 
-    containerView.backgroundColor = Theme.colors.mainLight
+    containerView.backgroundColor = Theme.Colors.mainLight
   }
 
   override func layoutSubviews() {
@@ -33,9 +32,9 @@ class NewsTableViewCell: UITableViewCell {
 
     containerView.roundedCorner(radius: 10)
   }
-  
+
   // MARK: - Setups
-  
+
   func setupCellWith(news: NewsViewModel?) {
     guard let news = news else {
       return
@@ -48,7 +47,7 @@ class NewsTableViewCell: UITableViewCell {
     titleLabel.text = news.title
     dateLabel.text = news.publishedAt
     authorLabel.text = news.author != nil ? news.author : news.sourceName
-    authorLabel.textColor = Theme.colors.red
+    authorLabel.textColor = Theme.Colors.red
   }
-  
+
 }

@@ -6,15 +6,15 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import Shared
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  
+
   var window: UIWindow?
   private var appCoordinator: AppCoordinator?
-  
+
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
@@ -35,15 +35,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     appCoordinator = AppCoordinator(window: window)
     appCoordinator?.start()
   }
-  
+
   func applicationWillResignActive(_ application: UIApplication) { }
-  
+
   func applicationDidEnterBackground(_ application: UIApplication) { }
-  
+
   func applicationWillEnterForeground(_ application: UIApplication) { }
-  
+
   func applicationDidBecomeActive(_ application: UIApplication) { }
-  
+
   func applicationWillTerminate(_ application: UIApplication) { }
-  
+
 }

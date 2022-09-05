@@ -5,12 +5,12 @@
 //  Copyright © 2018 abedalkareem omreyh. All rights reserved.
 //
 
-import UIKit
 import Shared
+import UIKit
 
 @IBDesignable
 class AMLabel: UILabel {
-  
+
   // MARK: - Parameters
 
   @IBInspectable var isOldSchool: Bool = false
@@ -18,17 +18,17 @@ class AMLabel: UILabel {
   @IBInspectable var isLight: Bool = false
 
   // MARK: - View lifecycle
-  
+
   override func awakeFromNib() {
     super.awakeFromNib()
-    
+
     var fontName = ""
     if isBold {
-      fontName = Theme.fonts.bold
+      fontName = Theme.Fonts.bold
     } else if isOldSchool {
-      fontName = Theme.fonts.oldSchool
+      fontName = Theme.Fonts.oldSchool
     } else {
-      fontName = Theme.fonts.light
+      fontName = Theme.Fonts.light
     }
 
     font = UIFont(name: fontName, size: font.pointSize)

@@ -6,28 +6,28 @@
 //  Copyright © 2018 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import Shared
+import UIKit
 
 class BaseViewController: UIViewController {
-  
+
   // MARK: - ViewController lifecycle
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    view.backgroundColor = Theme.colors.main
+    view.backgroundColor = Theme.Colors.main
   }
-  
+
   /// Use it to add the App logo at the top right of the app
   func addAppLogo() {
     let logo = UIBarButtonItem(title: "main_n_char".localize, style: .plain, target: nil, action: nil)
     logo.setTitleTextAttributes([
-      NSAttributedString.Key.font: UIFont(name: Theme.fonts.oldSchool, size: 20)!,
+      NSAttributedString.Key.font: UIFont(name: Theme.Fonts.oldSchool, size: 20)!
       ], for: .normal)
     navigationItem.rightBarButtonItem = logo
   }
-  
+
   /// Use it to add the back button to the navigation bar
   func addBackButton() {
     let image = Utilities.isRightToLeft ? #imageLiteral(resourceName: "back_ar") : #imageLiteral(resourceName: "back")
@@ -41,10 +41,12 @@ class BaseViewController: UIViewController {
   }
 
   /// Override it to handle the change button action
-  @objc func changeAppLanguage() { }
+  @objc
+  func changeAppLanguage() { }
 
-  @objc private func pop() {
+  @objc
+  private func pop() {
     navigationController?.popViewController(animated: true)
   }
-  
+
 }

@@ -6,6 +6,7 @@ PODS:
   - SDWebImage (5.13.2):
     - SDWebImage/Core (= 5.13.2)
   - SDWebImage/Core (5.13.2)
+  - SwiftLint (0.49.1)
 
 DEPENDENCIES:
   - AMProgressHUD
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - Nimble
   - Quick
   - SDWebImage
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - Nimble
     - Quick
     - SDWebImage
+    - SwiftLint
 
 SPEC CHECKSUMS:
   AMProgressHUD: 579420e7e702e38675a066654c5ca77a54ca6e46
@@ -28,7 +31,8 @@ SPEC CHECKSUMS:
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
   SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
+  SwiftLint: 32ee33ded0636d0905ef6911b2b67bbaeeedafa5
 
-PODFILE CHECKSUM: 79d8f97d3defdfe96905ecbd9666dc0478f801e0
+PODFILE CHECKSUM: 51a7e93075f20109352b2f81443b8659894c91a6
 
 COCOAPODS: 1.11.2
