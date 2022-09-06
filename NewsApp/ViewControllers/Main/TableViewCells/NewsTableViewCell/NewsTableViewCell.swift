@@ -25,12 +25,19 @@ class NewsTableViewCell: UITableViewCell {
     super.awakeFromNib()
 
     containerView.backgroundColor = Theme.Colors.mainLight
+    setBackgroundView()
   }
 
   override func layoutSubviews() {
     super.layoutSubviews()
 
     containerView.roundedCorner(radius: 10)
+  }
+
+  private func setBackgroundView() {
+    let selectedView = UIView()
+    selectedView.backgroundColor = Theme.Colors.red
+    selectedBackgroundView = selectedView
   }
 
   // MARK: - Setups
@@ -46,7 +53,7 @@ class NewsTableViewCell: UITableViewCell {
     }
     titleLabel.text = news.title
     dateLabel.text = news.publishedAt
-    authorLabel.text = news.author != nil ? news.author : news.sourceName
+    authorLabel.text = news.author
     authorLabel.textColor = Theme.Colors.red
   }
 

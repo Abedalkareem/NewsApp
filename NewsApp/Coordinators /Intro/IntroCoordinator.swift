@@ -10,10 +10,10 @@ import UIKit
 
 class IntroCoordinator: Coordinator {
 
-  // MARK: - Properties
+  // MARK: - Private Properties
 
   private let window: UIWindow?
-  lazy var introViewController: IntroViewController? = {
+  private lazy var introViewController: IntroViewController? = {
     return StoryboardUtil.viewController(storyboard: .intro)
   }()
 
@@ -44,11 +44,9 @@ class IntroCoordinator: Coordinator {
 
 extension IntroCoordinator: IntroViewControllerDelegate {
   func nextViewController() {
-    guard let introViewController = introViewController else {
-      return
-    }
-    let mainCoordinator = MainCoordinator(presenter: introViewController)
+    let mainCoordinator = MainCoordinator(presenter: window)
     addChild(mainCoordinator)
     mainCoordinator.start()
+    finish()
   }
 }

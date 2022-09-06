@@ -56,6 +56,7 @@
 		C694249922B6A5B6002D9158 /* UIImageView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C694249822B6A5B6002D9158 /* UIImageView+Helpers.swift */; };
 		C69424A122B6B45D002D9158 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69424A022B6B45D002D9158 /* NewsViewModel.swift */; };
 		C69424A922B6BD5A002D9158 /* NewsListViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69424A822B6BD5A002D9158 /* NewsListViewModelSpec.swift */; };
+		C6A03B4428C6E61B0086A319 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A03B4328C6E61B0086A319 /* ErrorView.swift */; };
 		C6A2104422E2DE8D0084B25C /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D9ED7322E265AA00438283 /* LocalizationHelper.swift */; };
 		C6A2104522E2DEA80084B25C /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D9ED7322E265AA00438283 /* LocalizationHelper.swift */; };
 		C6A2104722E2E0CC0084B25C /* UIView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2104622E2E0CC0084B25C /* UIView+Helper.swift */; };
@@ -183,6 +184,7 @@
 		C69424A622B6BAD4002D9158 /* topHeadlines.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topHeadlines.json; sourceTree = "<group>"; };
 		C69424A822B6BD5A002D9158 /* NewsListViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModelSpec.swift; sourceTree = "<group>"; };
 		C69424AF22B6C01E002D9158 /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
+		C6A03B4328C6E61B0086A319 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		C6A2104622E2E0CC0084B25C /* UIView+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Helper.swift"; sourceTree = "<group>"; };
 		C6A2104822E2FC930084B25C /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		C6D9ED6D22E262FC00438283 /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
@@ -492,6 +494,7 @@
 				C6497EE822B67A4D000D4F48 /* ExpandedView.swift */,
 				C6497EE922B67A4D000D4F48 /* AMButton.swift */,
 				C6497EEA22B67A4D000D4F48 /* AMLabel.swift */,
+				C6A03B4328C6E61B0086A319 /* ErrorView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -942,6 +945,7 @@
 				C6497EE222B679D5000D4F48 /* NewsDetailsViewController.swift in Sources */,
 				C6497EEC22B67A4D000D4F48 /* AMButton.swift in Sources */,
 				C6497EED22B67A4D000D4F48 /* AMLabel.swift in Sources */,
+				C6A03B4428C6E61B0086A319 /* ErrorView.swift in Sources */,
 				C6497ECC22B679AA000D4F48 /* AppCoordinator.swift in Sources */,
 				C6497EE122B679D5000D4F48 /* MainViewController.swift in Sources */,
 				C6D9ED6E22E262FC00438283 /* UIView+Animations.swift in Sources */,

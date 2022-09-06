@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wh3-Qg-BrS">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wh3-Qg-BrS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,30 +18,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AM3-3A-JG8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="wh3-Qg-BrS" id="lAH-B1-ak6"/>
                                     <outlet property="delegate" destination="wh3-Qg-BrS" id="zho-c2-eQ3"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MU6-gj-Zsr" customClass="ErrorView" customModule="NewsApp" customModuleProvider="target">
+                                <rect key="frame" x="87" y="358" width="240" height="180"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="41y-R9-J2d"/>
+                                    <constraint firstAttribute="height" constant="180" id="bdb-E0-y4E"/>
+                                </constraints>
+                            </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="n1f-8p-iNf"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="AM3-3A-JG8" firstAttribute="leading" secondItem="n1f-8p-iNf" secondAttribute="leading" id="96e-y0-F1Z"/>
-                            <constraint firstItem="AM3-3A-JG8" firstAttribute="trailing" secondItem="n1f-8p-iNf" secondAttribute="trailing" id="XTj-Se-rx1"/>
-                            <constraint firstItem="AM3-3A-JG8" firstAttribute="top" secondItem="Ucl-Bj-sma" secondAttribute="top" id="hMM-FT-8yC"/>
-                            <constraint firstItem="AM3-3A-JG8" firstAttribute="bottom" secondItem="n1f-8p-iNf" secondAttribute="bottom" id="j4c-Ea-GRu"/>
+                            <constraint firstItem="MU6-gj-Zsr" firstAttribute="centerX" secondItem="Ucl-Bj-sma" secondAttribute="centerX" id="5vd-RB-osM"/>
+                            <constraint firstItem="AM3-3A-JG8" firstAttribute="leading" secondItem="n1f-8p-iNf" secondAttribute="leading" id="9Ed-8w-djr"/>
+                            <constraint firstItem="AM3-3A-JG8" firstAttribute="bottom" secondItem="n1f-8p-iNf" secondAttribute="bottom" id="F5l-Fh-9LO"/>
+                            <constraint firstItem="AM3-3A-JG8" firstAttribute="top" secondItem="n1f-8p-iNf" secondAttribute="top" id="NUY-rJ-Qqz"/>
+                            <constraint firstItem="MU6-gj-Zsr" firstAttribute="centerY" secondItem="Ucl-Bj-sma" secondAttribute="centerY" id="cvh-ma-fRA"/>
+                            <constraint firstItem="AM3-3A-JG8" firstAttribute="trailing" secondItem="n1f-8p-iNf" secondAttribute="trailing" id="hu8-3P-RoA"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="n1f-8p-iNf"/>
                     </view>
                     <connections>
+                        <outlet property="errorView" destination="MU6-gj-Zsr" id="5q3-pF-d5e"/>
                         <outlet property="tableView" destination="AM3-3A-JG8" id="FIa-YD-fyU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bG-an-TTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8.8000000000000007" y="-11.244377811094454"/>
+            <point key="canvasLocation" x="-10.144927536231885" y="-11.383928571428571"/>
         </scene>
         <!--News Details View Controller-->
         <scene sceneID="Lgh-1R-0lo">
@@ -136,6 +146,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="JVF-zn-Jht"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cvx-lg-YSI" firstAttribute="trailing" secondItem="JVF-zn-Jht" secondAttribute="trailing" id="2j5-JI-gjY"/>
@@ -143,7 +154,6 @@
                             <constraint firstItem="Cvx-lg-YSI" firstAttribute="bottom" secondItem="JVF-zn-Jht" secondAttribute="bottom" id="RPN-Ow-zQC"/>
                             <constraint firstItem="Cvx-lg-YSI" firstAttribute="leading" secondItem="JVF-zn-Jht" secondAttribute="leading" id="Wbl-DI-F34"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="JVF-zn-Jht"/>
                     </view>
                     <connections>
                         <outlet property="authorLabel" destination="1vT-ET-8rs" id="tPK-S1-TBE"/>
@@ -158,4 +168,26 @@
             <point key="canvasLocation" x="749.60000000000002" y="-11.244377811094454"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1vT-ET-8rs">
+            <size key="intrinsicContentSize" width="31" height="14.5"/>
+        </designable>
+        <designable name="Axe-JN-Qhs">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+        <designable name="HUe-GC-ei1">
+            <size key="intrinsicContentSize" width="4" height="18"/>
+        </designable>
+        <designable name="Rnj-oh-bOD">
+            <size key="intrinsicContentSize" width="31" height="14.5"/>
+        </designable>
+        <designable name="hQm-4N-Npx">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

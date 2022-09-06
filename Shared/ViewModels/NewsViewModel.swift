@@ -27,7 +27,7 @@ public class NewsViewModel {
     url = news.url
     publishedAt = news.publishedAt
     content = news.content
-    author = news.author
+    author = news.author != nil ? news.author : news.source?.name
     sourceID = news.source?.id
     sourceName = news.source?.name
   }

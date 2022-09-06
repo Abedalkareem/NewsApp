@@ -13,6 +13,7 @@ class MainViewController: BaseViewController {
 
   // MARK: - IBOutlets
 
+  @IBOutlet private weak var errorView: ErrorView!
   @IBOutlet private weak var tableView: UITableView!
 
   // MARK: - Parameters
@@ -45,12 +46,15 @@ class MainViewController: BaseViewController {
   private func observeForChanges() {
     newsListViewModel?.news?.bind(observer: { [weak self] _ in
       LoadingHelper.dismiss()
+      self?.tableView.isHidden = false
+      self?.errorView.isHidden = true
       self?.tableView.reloadData()
     })
-    newsListViewModel?.error?.bind(observer: { [weak self] _ in
+    newsListViewModel?.error?.bind(observer: { [weak self] error in
       LoadingHelper.dismiss()
       self?.tableView.isHidden = true
-      // TODO: Show the error
+      self?.errorView.isHidden = false
+      self?.errorView.message = error?.localizedDescription
     })
   }
 
@@ -63,6 +67,8 @@ class MainViewController: BaseViewController {
   }
 }
 
+// MARK: - UITableViewDataSource, UITableViewDelegate
+
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,7 +77,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as NewsTableViewCell
-    cell.setupCellWith(news: newsListViewModel!.itemFor(indexPath))
+    cell.setupCellWith(news: newsListViewModel?.itemFor(indexPath))
     return cell
   }
 

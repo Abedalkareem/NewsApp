@@ -13,9 +13,21 @@ class AMLabel: UILabel {
 
   // MARK: - Parameters
 
-  @IBInspectable var isOldSchool: Bool = false
-  @IBInspectable var isBold: Bool = false
-  @IBInspectable var isLight: Bool = false
+  @IBInspectable var isOldSchool: Bool = false {
+    didSet {
+      updateFont()
+    }
+  }
+  @IBInspectable var isBold: Bool = false {
+    didSet {
+      updateFont()
+    }
+  }
+  @IBInspectable var isLight: Bool = false {
+    didSet {
+      updateFont()
+    }
+  }
 
   // MARK: - View lifecycle
 

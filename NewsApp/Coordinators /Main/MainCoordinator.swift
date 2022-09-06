@@ -14,18 +14,16 @@ class MainCoordinator: Coordinator {
 
   // MARK: - Properties
 
-  var presenter: UIViewController?
-  lazy var mainViewController: MainViewController = {
+  private var presenter: UIWindow?
+  private lazy var mainViewController: MainViewController = {
     let mainViewController: MainViewController = StoryboardUtil.viewController(storyboard: .main)
     mainViewController.newsListViewModel = newsListViewModel
     return mainViewController
   }()
-
-  lazy var rootViewController: UINavigationController = {
+  private lazy var rootViewController: UINavigationController = {
     return UINavigationController(rootViewController: mainViewController)
   }()
-
-  lazy var newsListViewModel: NewsListViewModel = {
+  private lazy var newsListViewModel: NewsListViewModel = {
     let newsServices = NewsServices(dataManager: DataManager(networking: HttpClient()))
     let newsListViewModel = NewsListViewModel(newsServices: newsServices)
     newsListViewModel.coordinatorDelegate = self
@@ -34,7 +32,7 @@ class MainCoordinator: Coordinator {
 
   // MARK: - init
 
-  init(presenter: UIViewController) {
+  init(presenter: UIWindow?) {
     self.presenter = presenter
   }
 
@@ -45,7 +43,7 @@ class MainCoordinator: Coordinator {
       return
     }
     rootViewController.modalTransitionStyle = .crossDissolve
-    presenter.present(rootViewController, animated: true, completion: nil)
+    presenter.rootViewController = rootViewController
   }
 
 }
