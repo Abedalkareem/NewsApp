@@ -15,7 +15,7 @@ class NewsDetailsCoordinator: Coordinator {
 
   var presenter: UINavigationController?
   lazy var newsDetailsViewController: NewsDetailsViewController = {
-    let newsDetailsViewController = StoryboardUtil.viewController(NewsDetailsViewController.self, storyboard: .main)
+    let newsDetailsViewController: NewsDetailsViewController = StoryboardUtil.viewController(storyboard: .main)
     newsDetailsViewController.newsListViewModel = newsListViewModel
     return newsDetailsViewController
   }()

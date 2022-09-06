@@ -26,8 +26,7 @@ class IntroViewController: BaseViewController {
 
     view.hideAllViews()
 
-    aboutLabel.setTextWithTypeAnimation(typedText: "intro_about_text".localize, characterDelay: 10)
-
+    aboutLabel.setTextWithTypeAnimation(typedText: "intro_about_text".localize)
   }
 
   override func viewDidAppear(_ animated: Bool) {

@@ -16,7 +16,7 @@ class MainCoordinator: Coordinator {
 
   var presenter: UIViewController?
   lazy var mainViewController: MainViewController = {
-    let mainViewController = StoryboardUtil.viewController(MainViewController.self, storyboard: .main)
+    let mainViewController: MainViewController = StoryboardUtil.viewController(storyboard: .main)
     mainViewController.newsListViewModel = newsListViewModel
     return mainViewController
   }()
@@ -59,7 +59,7 @@ extension MainCoordinator: NewsViewModelDelegate {
   }
 
   func languageDidChanged() {
-    let mainViewController = StoryboardUtil.viewController(MainViewController.self, storyboard: .main)
+    let mainViewController: MainViewController = StoryboardUtil.viewController(storyboard: .main)
     mainViewController.newsListViewModel = newsListViewModel
     self.mainViewController = mainViewController
 

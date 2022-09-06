@@ -10,12 +10,12 @@ import UIKit
 
 class AppCoordinator: Coordinator {
 
-  // MARK: - Properties
+  // MARK: - Private Properties
 
-  let window: UIWindow?
+  private let window: UIWindow?
 
-  lazy var rootViewController: SplashViewController? = {
-    return StoryboardUtil.viewController(SplashViewController.self, storyboard: .intro)
+  private lazy var rootViewController: SplashViewController? = {
+    return StoryboardUtil.viewController(storyboard: .intro)
   }()
 
   // MARK: - init
@@ -40,12 +40,11 @@ class AppCoordinator: Coordinator {
   }
 }
 
+// MARK: - SplashViewControllerDelegate
+
 extension AppCoordinator: SplashViewControllerDelegate {
   func nextViewController() {
-    guard let rootViewController = rootViewController else {
-      return
-    }
-    let introCoordinator = IntroCoordinator(presenter: rootViewController)
+    let introCoordinator = IntroCoordinator(window: window)
     addChild(introCoordinator)
     introCoordinator.start()
     finish()

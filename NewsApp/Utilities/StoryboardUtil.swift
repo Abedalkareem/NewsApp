@@ -12,10 +12,10 @@ class StoryboardUtil {
 
   private init() {}
 
-  static func viewController<T: UIViewController>(_ viewController: T.Type, storyboard: Storyboards) -> T {
+  static func viewController<T: UIViewController>(storyboard: Storyboards) -> T {
     let storyboard = UIStoryboard(name: storyboard.rawValue, bundle: nil)
     // swiftlint:disable force_cast
-    return storyboard.instantiateViewController(withIdentifier: String(describing: viewController.self)) as! T
+    return storyboard.instantiateViewController(withIdentifier: String(describing: T.self)) as! T
   }
 
 }

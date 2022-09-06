@@ -12,26 +12,26 @@ class IntroCoordinator: Coordinator {
 
   // MARK: - Properties
 
-  var presenter: UIViewController?
+  private let window: UIWindow?
   lazy var introViewController: IntroViewController? = {
-    return StoryboardUtil.viewController(IntroViewController.self, storyboard: .intro)
+    return StoryboardUtil.viewController(storyboard: .intro)
   }()
 
   // MARK: - init
 
-  init(presenter: UIViewController) {
-    self.presenter = presenter
+  init(window: UIWindow?) {
+    self.window = window
   }
 
   // MARK: - Coordinator
 
   override func start() {
-    guard let presenter = presenter, let introViewController = introViewController else {
+    guard let window = window, let introViewController = introViewController else {
       return
     }
     introViewController.modalTransitionStyle = .crossDissolve
     introViewController.delegate = self
-    presenter.present(introViewController, animated: true, completion: nil)
+    window.rootViewController = introViewController
   }
 
   override func finish() {
@@ -39,6 +39,8 @@ class IntroCoordinator: Coordinator {
   }
 
 }
+
+// MARK: - IntroViewControllerDelegate
 
 extension IntroCoordinator: IntroViewControllerDelegate {
   func nextViewController() {

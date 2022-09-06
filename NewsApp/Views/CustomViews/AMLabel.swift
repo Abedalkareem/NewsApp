@@ -22,6 +22,10 @@ class AMLabel: UILabel {
   override func awakeFromNib() {
     super.awakeFromNib()
 
+    updateFont()
+  }
+
+  private func updateFont() {
     var fontName = ""
     if isBold {
       fontName = Theme.Fonts.bold
@@ -32,7 +36,6 @@ class AMLabel: UILabel {
     }
 
     font = UIFont(name: fontName, size: font.pointSize)
-
   }
 
 }
