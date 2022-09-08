@@ -17,26 +17,4 @@ public enum Constants {
                                   17, 7, 3, 19, 28, 124]
   }
 
-  enum Urls {
-    public static let apiUrl = "https://newsapi.org/v2/"
-  }
-
-  public enum Errors {
-    public static let parsing = NSError(domain: "",
-                                        code: -2,
-                                        userInfo: ["localizedDescription": "Error while getting the data"])
-    public static let offline = NSError(domain: "",
-                                        code: -3,
-                                        userInfo: ["localizedDescription": "The Internet connection appears to be offline"])
-    public static let responseFailure = NSError(domain: "",
-                                                code: -4,
-                                                userInfo: ["localizedDescription": "Failed to conect to server"])
-  }
-
-}
-
-enum Endpoint: String {
-  case topHeadlines = "top-headlines"
-  case everything = "everything"
-  case sources = "sources"
 }

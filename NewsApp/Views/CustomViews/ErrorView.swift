@@ -88,7 +88,7 @@ class ErrorView: UIView {
     ])
 
     errorView.isHidden = true
-    
+
     return errorView
   }
 }

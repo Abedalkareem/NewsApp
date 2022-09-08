@@ -37,7 +37,7 @@ extension EndPoint {
     var params = ["apiKey": Obfuscator.deObfuscate("dJHKGHas34#$DFSAdas", Constants.Keys.apiKey)]
     switch self {
     case .topHeadlines:
-      params["country"] = Utilities.isRightToLeft ? "ae" : "us"
+      params["country"] = LocalizationHelper.isRightToLeft ? "ae" : "us"
     case .everything, .sources:
       break
     }

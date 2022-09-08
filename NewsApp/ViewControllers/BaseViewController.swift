@@ -43,7 +43,7 @@ class BaseViewController: UIViewController {
 
   /// Adds the back button to the navigation bar.
   func addBackButton() {
-    let image = Utilities.isRightToLeft ? #imageLiteral(resourceName: "back_ar") : #imageLiteral(resourceName: "back")
+    let image = LocalizationHelper.isRightToLeft ? #imageLiteral(resourceName: "back_ar") : #imageLiteral(resourceName: "back")
     let backButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(pop))
     navigationItem.leftBarButtonItem = backButton
   }
