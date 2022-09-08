@@ -29,6 +29,9 @@ The project has two targets:
 - NewsApp: A target for the iOS app.
 - Shared: A target that has all the components that can be shared between multiple platforms.
 
+## Unit tests  
+All the tests are in the `SharedTest` target, to run them press `command` and `U`. 
+
 ## Dependencies
 
 - SDWebImage.
