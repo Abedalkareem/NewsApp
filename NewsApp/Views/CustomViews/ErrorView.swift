@@ -15,6 +15,7 @@ class ErrorView: UIView {
 
   var message: String? {
     didSet {
+      isHidden = false
       label.text = message
     }
   }
@@ -72,4 +73,22 @@ class ErrorView: UIView {
     ])
   }
 
+  // MARK: - Public Methods
+
+  static func addTo(view: UIView) -> ErrorView {
+    let errorView = ErrorView()
+    view.addSubview(errorView)
+
+    errorView.translatesAutoresizingMaskIntoConstraints = false
+    NSLayoutConstraint.activate([
+      errorView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      errorView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      errorView.widthAnchor.constraint(equalToConstant: 240),
+      errorView.heightAnchor.constraint(equalToConstant: 180)
+    ])
+
+    errorView.isHidden = true
+    
+    return errorView
+  }
 }

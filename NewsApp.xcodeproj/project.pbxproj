@@ -305,6 +305,7 @@
 		C6497E8522B675BF000D4F48 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C6497ED722B679D5000D4F48 /* TableViewCells */,
 				C6497EE622B67A40000D4F48 /* Storyboards */,
 				C6497EE722B67A4D000D4F48 /* CustomViews */,
 			);
@@ -454,7 +455,6 @@
 		C6497ED622B679D5000D4F48 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				C6497ED722B679D5000D4F48 /* TableViewCells */,
 				C6497EDB22B679D5000D4F48 /* MainViewController.swift */,
 				C6497EDC22B679D5000D4F48 /* NewsDetailsViewController.swift */,
 			);

@@ -50,8 +50,8 @@ class MainCoordinator: Coordinator {
 
 extension MainCoordinator: NewsViewModelDelegate {
 
-  func openNews() {
-    let newsDetailsCoordinator = NewsDetailsCoordinator(presenter: rootViewController, newsListViewModel: newsListViewModel)
+  func open(news: NewsViewModel) {
+    let newsDetailsCoordinator = NewsDetailsCoordinator(presenter: rootViewController, newsViewModel: news)
     addChild(newsDetailsCoordinator)
     newsDetailsCoordinator.start()
   }

@@ -25,7 +25,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITn-1i-3dW" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
-                                <rect key="frame" x="154.5" y="358" width="105" height="180"/>
+                                <rect key="frame" x="201" y="438" width="12.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="G6W-ld-l7v" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
-                                <rect key="frame" x="111.5" y="330.5" width="191.5" height="95.5"/>
+                                <rect key="frame" x="123.5" y="368" width="167" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -88,7 +88,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----------------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cU-zY-lER" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
-                                <rect key="frame" x="111.5" y="424.5" width="191.5" height="16"/>
+                                <rect key="frame" x="123.5" y="387" width="167" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -130,16 +130,16 @@
     </scenes>
     <designables>
         <designable name="6cU-zY-lER">
-            <size key="intrinsicContentSize" width="133.5" height="16"/>
+            <size key="intrinsicContentSize" width="167" height="20.5"/>
         </designable>
         <designable name="9ku-cV-n7x">
-            <size key="intrinsicContentSize" width="241" height="39"/>
+            <size key="intrinsicContentSize" width="158" height="33"/>
         </designable>
         <designable name="G6W-ld-l7v">
-            <size key="intrinsicContentSize" width="191.5" height="95.5"/>
+            <size key="intrinsicContentSize" width="42.5" height="20.5"/>
         </designable>
         <designable name="ITn-1i-3dW">
-            <size key="intrinsicContentSize" width="105" height="179.5"/>
+            <size key="intrinsicContentSize" width="12.5" height="20.5"/>
         </designable>
     </designables>
     <resources>

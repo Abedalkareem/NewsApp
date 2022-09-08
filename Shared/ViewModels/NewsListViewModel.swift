@@ -10,14 +10,17 @@ import UIKit
 
 public class NewsListViewModel {
 
-  // MARK: - Parameters
+  // MARK: - Properties
 
   public var news: Observable<[NewsViewModel]>?
   public var error: Observable<Error>?
-  public var selectedNews: NewsViewModel!
   public weak var coordinatorDelegate: NewsViewModelDelegate?
 
+  // MARK: - Private Properties
+
   private var newsServices: NewsServices
+
+  // MARK: - init
 
   public init(newsServices: NewsServices) {
     self.newsServices = newsServices
@@ -47,8 +50,10 @@ public class NewsListViewModel {
   }
 
   public func didSelectItemAt(_ indexPath: IndexPath) {
-    selectedNews = news?.value?[indexPath.row]
-    coordinatorDelegate?.openNews()
+    guard let selectedNews = news?.value?[indexPath.row] else {
+      return
+    }
+    coordinatorDelegate?.open(news: selectedNews)
   }
 
   public func heightOfRowAt(_ indexPath: IndexPath) -> CGFloat {
@@ -62,6 +67,6 @@ public class NewsListViewModel {
 }
 
 public protocol NewsViewModelDelegate: AnyObject {
-  func openNews()
+  func open(news: NewsViewModel)
   func languageDidChanged()
 }

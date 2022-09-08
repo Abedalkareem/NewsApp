@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,28 +24,17 @@
                                     <outlet property="delegate" destination="wh3-Qg-BrS" id="zho-c2-eQ3"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MU6-gj-Zsr" customClass="ErrorView" customModule="NewsApp" customModuleProvider="target">
-                                <rect key="frame" x="87" y="358" width="240" height="180"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="41y-R9-J2d"/>
-                                    <constraint firstAttribute="height" constant="180" id="bdb-E0-y4E"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n1f-8p-iNf"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MU6-gj-Zsr" firstAttribute="centerX" secondItem="Ucl-Bj-sma" secondAttribute="centerX" id="5vd-RB-osM"/>
                             <constraint firstItem="AM3-3A-JG8" firstAttribute="leading" secondItem="n1f-8p-iNf" secondAttribute="leading" id="9Ed-8w-djr"/>
                             <constraint firstItem="AM3-3A-JG8" firstAttribute="bottom" secondItem="n1f-8p-iNf" secondAttribute="bottom" id="F5l-Fh-9LO"/>
                             <constraint firstItem="AM3-3A-JG8" firstAttribute="top" secondItem="n1f-8p-iNf" secondAttribute="top" id="NUY-rJ-Qqz"/>
-                            <constraint firstItem="MU6-gj-Zsr" firstAttribute="centerY" secondItem="Ucl-Bj-sma" secondAttribute="centerY" id="cvh-ma-fRA"/>
                             <constraint firstItem="AM3-3A-JG8" firstAttribute="trailing" secondItem="n1f-8p-iNf" secondAttribute="trailing" id="hu8-3P-RoA"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="errorView" destination="MU6-gj-Zsr" id="5q3-pF-d5e"/>
                         <outlet property="tableView" destination="AM3-3A-JG8" id="FIa-YD-fyU"/>
                     </connections>
                 </viewController>
@@ -78,7 +66,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnj-oh-bOD" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="344.5" width="31" height="16"/>
+                                        <rect key="frame" x="8" y="344.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -88,7 +76,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vT-ET-8rs" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
-                                        <rect key="frame" x="53" y="345" width="31" height="15"/>
+                                        <rect key="frame" x="63.5" y="344.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.74309569600000003" green="0.2857166827" blue="0.36470532420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -98,7 +86,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUe-GC-ei1" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
-                                        <rect key="frame" x="43" y="342.5" width="5" height="18"/>
+                                        <rect key="frame" x="53.5" y="345" width="5" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="5" id="UUp-Z4-m2j"/>
                                             <constraint firstAttribute="height" constant="18" id="vja-JU-mAj"/>
@@ -112,7 +100,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axe-JN-Qhs" customClass="AMLabel" customModule="NewsApp" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="376.5" width="398" height="20.5"/>
+                                        <rect key="frame" x="8" y="379" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -159,6 +147,7 @@
                         <outlet property="authorLabel" destination="1vT-ET-8rs" id="tPK-S1-TBE"/>
                         <outlet property="dateLabel" destination="Rnj-oh-bOD" id="dOe-0H-pUo"/>
                         <outlet property="descriptionLabel" destination="Axe-JN-Qhs" id="zb0-OO-Ymd"/>
+                        <outlet property="dividerLabel" destination="HUe-GC-ei1" id="PFV-wu-SVy"/>
                         <outlet property="newsImageView" destination="Qfj-ek-bwu" id="2iN-hc-neX"/>
                         <outlet property="titleLabel" destination="hQm-4N-Npx" id="Wv9-eP-vcd"/>
                     </connections>
@@ -170,24 +159,19 @@
     </scenes>
     <designables>
         <designable name="1vT-ET-8rs">
-            <size key="intrinsicContentSize" width="31" height="14.5"/>
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
         </designable>
         <designable name="Axe-JN-Qhs">
             <size key="intrinsicContentSize" width="41.5" height="20.5"/>
         </designable>
         <designable name="HUe-GC-ei1">
-            <size key="intrinsicContentSize" width="4" height="18"/>
+            <size key="intrinsicContentSize" width="4" height="20.5"/>
         </designable>
         <designable name="Rnj-oh-bOD">
-            <size key="intrinsicContentSize" width="31" height="14.5"/>
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
         </designable>
         <designable name="hQm-4N-Npx">
             <size key="intrinsicContentSize" width="41.5" height="20.5"/>
         </designable>
     </designables>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

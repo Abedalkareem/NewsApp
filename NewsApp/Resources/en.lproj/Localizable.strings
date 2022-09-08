@@ -27,3 +27,6 @@
 
 "news_details_title" = "Details";
 
+// MARK: - Common
+
+"something_went_wrong" = "Something went wrong";

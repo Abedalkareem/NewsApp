@@ -16,17 +16,17 @@ class NewsDetailsCoordinator: Coordinator {
   var presenter: UINavigationController?
   lazy var newsDetailsViewController: NewsDetailsViewController = {
     let newsDetailsViewController: NewsDetailsViewController = StoryboardUtil.viewController(storyboard: .main)
-    newsDetailsViewController.newsListViewModel = newsListViewModel
+    newsDetailsViewController.newsViewModel = newsViewModel
     return newsDetailsViewController
   }()
 
-  var newsListViewModel: NewsListViewModel?
+  var newsViewModel: NewsViewModel?
 
   // MARK: - init
 
-  init(presenter: UINavigationController, newsListViewModel: NewsListViewModel) {
+  init(presenter: UINavigationController, newsViewModel: NewsViewModel) {
     self.presenter = presenter
-    self.newsListViewModel = newsListViewModel
+    self.newsViewModel = newsViewModel
   }
 
   // MARK: - Coordinator

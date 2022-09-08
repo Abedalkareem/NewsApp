@@ -26,3 +26,7 @@
 // MARK: - News details
 
 "news_details_title" = "التفاصيل";
+
+// MARK: - Common
+
+"something_went_wrong" = "حصل خطأ ما";

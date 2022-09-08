@@ -13,19 +13,19 @@ class MainViewController: BaseViewController {
 
   // MARK: - IBOutlets
 
-  @IBOutlet private weak var errorView: ErrorView!
   @IBOutlet private weak var tableView: UITableView!
 
-  // MARK: - Parameters
+  // MARK: - Private Properties
 
   var newsListViewModel: NewsListViewModel?
+  var errorView: ErrorView?
 
   // MARK: - ViewController lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    title = "main_title_top_headlins".localize
+    setup()
 
     addChangeLanguageButton()
 
@@ -38,6 +38,11 @@ class MainViewController: BaseViewController {
     getNews()
   }
 
+  private func setup() {
+    title = "main_title_top_headlins".localize
+    errorView = ErrorView.addTo(view: view)
+  }
+
   private func getNews() {
     LoadingHelper.show()
     newsListViewModel?.getTopHeadlines()
@@ -46,16 +51,24 @@ class MainViewController: BaseViewController {
   private func observeForChanges() {
     newsListViewModel?.news?.bind(observer: { [weak self] _ in
       LoadingHelper.dismiss()
-      self?.tableView.isHidden = false
-      self?.errorView.isHidden = true
+      self?.hideError()
       self?.tableView.reloadData()
     })
     newsListViewModel?.error?.bind(observer: { [weak self] error in
       LoadingHelper.dismiss()
-      self?.tableView.isHidden = true
-      self?.errorView.isHidden = false
-      self?.errorView.message = error?.localizedDescription
+      self?.showError(message: error?.localizedDescription)
     })
+  }
+
+  private func showError(message: String?) {
+    tableView.isHidden = true
+    errorView?.isHidden = false
+    errorView?.message = message
+  }
+
+  private func hideError() {
+    tableView?.isHidden = false
+    errorView?.isHidden = true
   }
 
   private func registerCells() {

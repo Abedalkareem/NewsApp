@@ -46,11 +46,9 @@ class NewsTableViewCell: UITableViewCell {
     guard let news = news else {
       return
     }
-    if let imageLink = news.urlToImage, let url = URL(string: imageLink) {
-      newImageView.setImage(with: url, placeholderImage: #imageLiteral(resourceName: "placeholder"))
-    } else {
-      newImageView.image = #imageLiteral(resourceName: "placeholder")
-    }
+
+    newImageView.setImage(with: news.urlToImage,
+                          placeholderImage: #imageLiteral(resourceName: "placeholder"))
     titleLabel.text = news.title
     dateLabel.text = news.publishedAt
     authorLabel.text = news.author
