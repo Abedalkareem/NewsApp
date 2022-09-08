@@ -22,6 +22,13 @@ News app, an app to list news and it's details. The app support two languages, A
 - Clone the app.
 - Run the app 🚀.
 
+## Architecture  
+
+The project uses MVVM architecture with coordinator. To observe to data changes from the view model, an `Observable` class has been created.  
+The project has two targets:  
+- NewsApp: A target for the iOS app.
+- Shared: A target that has all the components that can be shared between multiple platforms.
+
 ## Dependencies
 
 - SDWebImage.
