@@ -2,17 +2,17 @@
 <img src="https://raw.githubusercontent.com/Abedalkareem/NewsApp/master/logo.png">  </center>
 </p>  
 
-News app, an app to list news and it's details. The app support two languages, Arabic and English.
+News app, an app that lists news and its details. The app support two languages, Arabic and English.
 
 ## Screenshots
 
 <table>
   <tbody>
     <tr>
-      <th><img src="https://raw.githubusercontent.com/Abedalkareem/NewsApp/master/screen1.png"/></th>
-      <th><img src="https://raw.githubusercontent.com/Abedalkareem/NewsApp/master/screen2.png"/></th>
-      <th><img src="https://raw.githubusercontent.com/Abedalkareem/NewsApp/master/screen3.png"/></th>
-      <th><img src="https://raw.githubusercontent.com/Abedalkareem/NewsApp/master/screen4.png"/></th>
+      <th><img src="https://raw.githubusercontent.com/Abedalkareem/NewsApp/master/screenshots/screen1.png"/></th>
+      <th><img src="https://raw.githubusercontent.com/Abedalkareem/NewsApp/master/screenshots/screen2.png"/></th>
+      <th><img src="https://raw.githubusercontent.com/Abedalkareem/NewsApp/master/screenshots/screen3.png"/></th>
+      <th><img src="https://raw.githubusercontent.com/Abedalkareem/NewsApp/master/screenshots/screen4.png"/></th>
     </tr>
   </tbody>
 </table>
